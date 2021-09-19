@@ -1,38 +1,53 @@
 .App {
+  width: 60%;
+  margin: 50px auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Employees {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear forwards;
-  }
+.Employee {
+  border-radius: 10px;
+  border: 2px solid green;
+  padding: 20px;
+}
+.Employee h2 {
+  margin-top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.controlButton {
+  margin-top: 30px;
+  padding: 20px;
+  background: #ccc;
+}
+.controlButton span.value {
+  display: block;
+  margin: 0 auto 30px;
+  font-size: 24px;
+}
+
+.controlButton .buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+}
+.controlButton .buttons button {
+  color: green;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controlButton .buttons button:hover {
+  background: green;
+  color: #fff;
 }
